@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "kl.js",
         "cursor": {
-          "lineNumber": 5,
-          "column": 1
+          "lineNumber": 11,
+          "column": 19
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -263,6 +263,17 @@
           "stageDeploymentId": "0xzpbp",
           "mode": 1
         }
+      },
+      "s3cloud9Ktest": {
+        "name": "s3cloud9Ktest",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "cloud9-ktest"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -300,7 +311,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586408046631
+    "lastSave": 1586408604338
   },
   "VCS_STATE": {
     "provider": "GitHub",
