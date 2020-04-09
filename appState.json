@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "kl.js",
         "cursor": {
-          "lineNumber": 18,
-          "column": 13
+          "lineNumber": 9,
+          "column": 19
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -403,6 +403,24 @@
             "validity": true
           }
         }
+      },
+      "ddbnew": {
+        "name": "ddbnew",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "table": {
+            "arn": "",
+            "name": "new",
+            "partitionKey": "i",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          }
+        }
       }
     },
     "customTemplate": {
@@ -454,7 +472,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586409657082
+    "lastSave": 1586411151269
   },
   "VCS_STATE": {
     "provider": "GitHub",

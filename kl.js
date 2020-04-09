@@ -1,23 +1,15 @@
-let SL_REDIS = require('slappforge-sdk-redis');
-let clusterManager = require('./ClusterManager');
-const redis = new SL_REDIS.Redis(clusterManager);
+let AWS = require('aws-sdk');
+const ddb = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async (event) => {
-
-    // You must always quit the redis client after it's used
-    redis.rename({
-        clusterIdentifier: 'k',
-        params: [{
-            key: 'k',
-            name: '1'
-        }]
-    }, function (error, response, redisClient) {
-        if (error) {
-            callback(error);
-        } else {
-            redisClient.quit();
-        }
-    });
+    try {
+        let data = await ddb.scan({
+            TableName: "new"
+        }).promise();
+console.log(data);
+    } catch (err) {
+        // error handling goes here
+    };
 
     return { "message": "Successfully executed" };
 };
