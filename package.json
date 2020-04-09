@@ -2,7 +2,8 @@
   "name": "kl",
   "version": "1.0.0",
   "dependencies": {
-    "slappforge-sdk-aws": "0.0.5"
+    "slappforge-sdk-aws": "0.0.5",
+    "slappforge-sdk-redis": "0.0.3"
   },
   "devDependencies": {
     "aws-sdk": "2.644.0"

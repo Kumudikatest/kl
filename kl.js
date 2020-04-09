@@ -1,20 +1,22 @@
-let SL_AWS = require('slappforge-sdk-aws');
-let connectionManager = require('./ConnectionManager');
-const rds = new SL_AWS.RDS(connectionManager);
+let SL_REDIS = require('slappforge-sdk-redis');
+let clusterManager = require('./ClusterManager');
+const redis = new SL_REDIS.Redis(clusterManager);
 
 exports.handler = async (event) => {
 
-    // You must always end/destroy the DB connection after it's used
-    rds.beginTransaction({
-        instanceIdentifier: 'K'
-    }, function (error, connection) {
+    // You must always quit the redis client after it's used
+    redis.rename({
+        clusterIdentifier: 'k',
+        params: [{
+            key: 'k',
+            name: '1'
+        }]
+    }, function (error, response, redisClient) {
         if (error) {
-            throw error;
-            console.log(error);
+            callback(error);
+        } else {
+            redisClient.quit();
         }
-        console.log(connection);
-        connection.end();
-        
     });
 
     return { "message": "Successfully executed" };
