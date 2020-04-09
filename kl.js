@@ -1,17 +1,21 @@
-let AWS = require('aws-sdk');
-const s3 = new AWS.S3();
-const rekognition = new AWS.Rekognition();
+let SL_AWS = require('slappforge-sdk-aws');
+let connectionManager = require('./ConnectionManager');
+const rds = new SL_AWS.RDS(connectionManager);
 
 exports.handler = async (event) => {
-    try {
-        let data = await s3.listObjects({
-            Bucket: "cloud9-ktest",
-            MaxKeys: 10
-        }).promise();
-console.log(data);
-    } catch (err) {
-        // error handling goes here
-    };
+
+    // You must always end/destroy the DB connection after it's used
+    rds.beginTransaction({
+        instanceIdentifier: 'K'
+    }, function (error, connection) {
+        if (error) {
+            throw error;
+            console.log(error);
+        }
+        console.log(connection);
+        connection.end();
+        
+    });
 
     return { "message": "Successfully executed" };
 };

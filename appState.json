@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "kl.js",
         "cursor": {
-          "lineNumber": 11,
-          "column": 19
+          "lineNumber": 15,
+          "column": 33
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -37,6 +37,16 @@
             "eventTemplate": "hello-world"
           }
         }
+      },
+      "fdaf8b00-9a7d-4a6a-a301-383dd846ca4f": {
+        "id": "fdaf8b00-9a7d-4a6a-a301-383dd846ca4f",
+        "parent": null,
+        "name": "ConnectionManager.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ConnectionManager.js"
       }
     },
     "openFiles": [
@@ -274,6 +284,48 @@
             "name": "cloud9-ktest"
           }
         }
+      },
+      "rds-K": {
+        "name": "rds-K",
+        "type": "RDS",
+        "config": {
+          "editMode": false,
+          "operation": 1,
+          "rdsInstance": {
+            "rdsEngineType": "mysql",
+            "rdsEdition": "",
+            "rdsInstanceSpec": {
+              "dbInstanceClass": "db.r3.large",
+              "dbLicenseModel": "general-public-license",
+              "dbEngineVersion": "5.7.19"
+            },
+            "rdsSetting": {
+              "instanceIdentifier": "K",
+              "masterUsername": "K",
+              "masterPassword": "Test#123"
+            },
+            "rdsDBOptions": {
+              "dbName": "k",
+              "dbPort": "2121"
+            },
+            "rdsInstanceArn": "",
+            "Host": "",
+            "doesExist": false,
+            "initializationQuery": "",
+            "alreadyDeployed": false
+          },
+          "rdsInstanceResources": [],
+          "projectRegion": "us-east-1",
+          "mode": 0,
+          "additionalFiles": [],
+          "params": {
+            "query": "",
+            "inserts": ""
+          },
+          "isGlobalEditMode": false,
+          "enableInject": true,
+          "isNewFromGlobal": false
+        }
       }
     },
     "customTemplate": {
@@ -299,6 +351,13 @@
           "version": "2.644.0",
           "dev": true,
           "notRemovable": false
+        },
+        "slappforge-sdk-aws": {
+          "name": "slappforge-sdk-aws",
+          "language": "nodejs",
+          "version": "0.0.5",
+          "dev": false,
+          "notRemovable": false
         }
       }
     }
@@ -311,7 +370,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586408604338
+    "lastSave": 1586408949739
   },
   "VCS_STATE": {
     "provider": "GitHub",
