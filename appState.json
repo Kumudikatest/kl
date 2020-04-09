@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "kl.js",
         "cursor": {
-          "lineNumber": 9,
-          "column": 19
+          "lineNumber": 1,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -57,6 +57,16 @@
         "children": [],
         "isRemovable": true,
         "filePath": "ClusterManager.js"
+      },
+      "45ef204c-7fac-483d-8961-1a52a55aca84": {
+        "id": "45ef204c-7fac-483d-8961-1a52a55aca84",
+        "parent": null,
+        "name": "Authorizer.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Authorizer.js"
       }
     },
     "openFiles": [
@@ -421,6 +431,11 @@
             "mode": 0
           }
         }
+      },
+      "datastore": {
+        "name": "datastore",
+        "type": "CloudDatastore",
+        "config": {}
       }
     },
     "customTemplate": {
@@ -432,6 +447,22 @@
       {
         "lambdaId": "all",
         "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "GCP_SERVICE_ACCOUNT_KEY",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "GCP_PROJECT",
         "varValue": null,
         "shouldPersist": false,
         "displayOnly": false,
@@ -460,6 +491,13 @@
           "version": "0.0.3",
           "dev": false,
           "notRemovable": false
+        },
+        "googleapis": {
+          "name": "googleapis",
+          "language": "nodejs",
+          "version": "29.0.0",
+          "dev": false,
+          "notRemovable": false
         }
       }
     }
@@ -472,7 +510,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586411151269
+    "lastSave": 1586428663304
   },
   "VCS_STATE": {
     "provider": "GitHub",
