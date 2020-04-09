@@ -1,21 +1,21 @@
 let AWS = require('aws-sdk');
-const eventBridge = new AWS.EventBridge();
+const rekognition = new AWS.Rekognition();
 
 exports.handler = async (event) => {
+
     try {
-        let data = await eventBridge.putEvents({
-            Entries: [{
-                EventBusName: "ktest",
-                Source: "test",
-                DetailType: "test",
-                Detail: "{}"
-            }]
+        let data = await rekognition.detectText({
+            Image: {
+                S3Object: {
+                    Bucket: "cloud9-ktest",
+                    Name: "thisround1"
+                }
+            }
         }).promise();
 console.log(data);
     } catch (err) {
         // error handling goes here
     };
-
 
     return { "message": "Successfully executed" };
 };

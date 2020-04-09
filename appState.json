@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "kl.js",
         "cursor": {
-          "lineNumber": 14,
-          "column": 19
+          "lineNumber": 5,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -24,7 +24,7 @@
         },
         "triggers": [
           {
-            "resourceName": "alexaSK15970ba19cb64f6f9b22e6d5710707f0",
+            "resourceName": "apigusEast1TestAPIMyLambdadelete",
             "config": {}
           }
         ],
@@ -225,6 +225,44 @@
         "config": {
           "selectedRegion": "us-east-1"
         }
+      },
+      "rekognitionResource": {
+        "name": "rekognitionResource",
+        "type": "Rekognition",
+        "config": {}
+      },
+      "apigusEast1TestAPIMyLambdadelete": {
+        "name": "apigusEast1TestAPIMyLambdadelete",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/MyLambda": "98nqbj",
+            "/testdbput": "bu1jy0",
+            "/": "h2lelj6j7k",
+            "/newchange/test": "k6pdhn",
+            "/newchange": "q1ox7l",
+            "/testWithSlash": "q4m4g1",
+            "/testtwospeciallambda": "q4szm3",
+            "/testtwospecialkumutest": "wey3lk"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/MyLambda",
+          "resourceName": "MyLambda",
+          "resourceId": "98nqbj",
+          "restMethod": "DELETE",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test",
+          "stageDeploymentId": "0xzpbp",
+          "mode": 1
+        }
       }
     },
     "customTemplate": {
@@ -262,7 +300,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586407666436
+    "lastSave": 1586408046631
   },
   "VCS_STATE": {
     "provider": "GitHub",
