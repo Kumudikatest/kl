@@ -1,8 +1,8 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "cd40ef89-ae3f-4073-927d-fae318a6e91f": {
-        "id": "cd40ef89-ae3f-4073-927d-fae318a6e91f",
+      "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0": {
+        "id": "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0",
         "parent": null,
         "name": "kl.js",
         "type": "JS_LAMBDA",
@@ -15,46 +15,42 @@
           "column": 1
         },
         "config": {
-          "runtime": "nodejs10.x",
-          "handler": "handler",
+          "runtime": "nodejs8",
           "timeout": 60,
           "memory": 128,
-          "layers": [],
-          "name": "kl"
+          "triggerType": 0,
+          "name": "kl",
+          "handler": "handler"
         },
-        "triggers": [],
-        "testCases": {
-          "3c31ada3-d76b-41a8-bb99-50f55f4bed26": {
-            "id": "3c31ada3-d76b-41a8-bb99-50f55f4bed26",
-            "name": "Test event",
-            "functionId": "cd40ef89-ae3f-4073-927d-fae318a6e91f",
-            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
-            "eventTemplate": "hello-world"
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
           }
-        }
+        ]
       },
-      "fdaf8b00-9a7d-4a6a-a301-383dd846ca4f": {
-        "id": "fdaf8b00-9a7d-4a6a-a301-383dd846ca4f",
+      "3f1139c2-d54b-4838-a2a2-9f42502e2cdb": {
+        "id": "3f1139c2-d54b-4838-a2a2-9f42502e2cdb",
         "parent": null,
-        "name": "ConnectionManager.js",
+        "name": "index.js",
         "type": "JS_FILE",
         "isDirectory": false,
         "children": [],
-        "isRemovable": true,
-        "filePath": "ConnectionManager.js"
+        "isRemovable": false,
+        "filePath": "index.js"
       },
-      "34a07178-0052-4a26-b27c-28de958918ab": {
-        "id": "34a07178-0052-4a26-b27c-28de958918ab",
+      "c96dc9b7-424c-415e-8f39-2425aefddcaf": {
+        "id": "c96dc9b7-424c-415e-8f39-2425aefddcaf",
         "parent": null,
-        "name": "ClusterManager.js",
-        "type": "JS_FILE",
+        "name": "main.py",
+        "type": "PYTHON_FILE",
         "isDirectory": false,
         "children": [],
-        "isRemovable": true,
-        "filePath": "ClusterManager.js"
+        "isRemovable": false,
+        "filePath": "main.py"
       },
-      "45ef204c-7fac-483d-8961-1a52a55aca84": {
-        "id": "45ef204c-7fac-483d-8961-1a52a55aca84",
+      "9eb99156-65e9-4b5c-a44e-8761bc0c91e9": {
+        "id": "9eb99156-65e9-4b5c-a44e-8761bc0c91e9",
         "parent": null,
         "name": "Authorizer.js",
         "type": "JS_FILE",
@@ -65,64 +61,29 @@
       }
     },
     "openFiles": [
-      "cd40ef89-ae3f-4073-927d-fae318a6e91f"
+      "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0"
     ],
-    "currentFileId": "cd40ef89-ae3f-4073-927d-fae318a6e91f",
-    "resources": {},
+    "currentFileId": "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      },
+      "datastore": {
+        "name": "datastore",
+        "type": "CloudDatastore",
+        "config": {}
+      }
+    },
     "customTemplate": {
       "overrideDefault": false,
       "dialect": null,
       "definitions": null
     },
-    "envVariables": [
-      {
-        "lambdaId": "all",
-        "varKey": "SIGMA_AWS_ACC_ID",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "GCP_SERVICE_ACCOUNT_KEY",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": false
-      },
-      {
-        "lambdaId": "all",
-        "varKey": "GCP_PROJECT",
-        "varValue": null,
-        "shouldPersist": false,
-        "displayOnly": false,
-        "editable": false
-      }
-    ],
+    "envVariables": [],
     "packageJSON": {
       "dependencies": {
-        "aws-sdk": {
-          "name": "aws-sdk",
-          "language": "nodejs",
-          "version": "2.644.0",
-          "dev": true,
-          "notRemovable": false
-        },
-        "slappforge-sdk-aws": {
-          "name": "slappforge-sdk-aws",
-          "language": "nodejs",
-          "version": "0.0.5",
-          "dev": false,
-          "notRemovable": false
-        },
-        "slappforge-sdk-redis": {
-          "name": "slappforge-sdk-redis",
-          "language": "nodejs",
-          "version": "0.0.3",
-          "dev": false,
-          "notRemovable": false
-        },
         "googleapis": {
           "name": "googleapis",
           "language": "nodejs",
@@ -137,11 +98,11 @@
     "projectName": "kl",
     "projectDescription": "",
     "projectVersion": "1.0.0",
-    "projectRegion": "us-east-1",
-    "platform": "AWS",
+    "projectRegion": "asia-east2",
+    "platform": "GCP",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1586430418765
+    "lastSave": 1586500125480
   },
   "VCS_STATE": {
     "provider": "GitHub",
