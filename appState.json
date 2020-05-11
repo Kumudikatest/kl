@@ -1,8 +1,8 @@
 {
   "EDITOR_STATE": {
     "allProjectFiles": {
-      "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0": {
-        "id": "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0",
+      "82ca4ac0-0d6e-4b38-9748-2f2a7c00ee62": {
+        "id": "82ca4ac0-0d6e-4b38-9748-2f2a7c00ee62",
         "parent": null,
         "name": "kl.js",
         "type": "JS_LAMBDA",
@@ -29,8 +29,8 @@
           }
         ]
       },
-      "3f1139c2-d54b-4838-a2a2-9f42502e2cdb": {
-        "id": "3f1139c2-d54b-4838-a2a2-9f42502e2cdb",
+      "b3623735-3dde-4982-8925-2b8159c8c9a7": {
+        "id": "b3623735-3dde-4982-8925-2b8159c8c9a7",
         "parent": null,
         "name": "index.js",
         "type": "JS_FILE",
@@ -39,8 +39,8 @@
         "isRemovable": false,
         "filePath": "index.js"
       },
-      "c96dc9b7-424c-415e-8f39-2425aefddcaf": {
-        "id": "c96dc9b7-424c-415e-8f39-2425aefddcaf",
+      "ce2c3418-e873-46ec-8ffa-db9e15b128ae": {
+        "id": "ce2c3418-e873-46ec-8ffa-db9e15b128ae",
         "parent": null,
         "name": "main.py",
         "type": "PYTHON_FILE",
@@ -48,31 +48,21 @@
         "children": [],
         "isRemovable": false,
         "filePath": "main.py"
-      },
-      "9eb99156-65e9-4b5c-a44e-8761bc0c91e9": {
-        "id": "9eb99156-65e9-4b5c-a44e-8761bc0c91e9",
-        "parent": null,
-        "name": "Authorizer.js",
-        "type": "JS_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "Authorizer.js"
       }
     },
     "openFiles": [
-      "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0"
+      "82ca4ac0-0d6e-4b38-9748-2f2a7c00ee62"
     ],
-    "currentFileId": "4c2ffd7d-df40-40d8-b0d7-57d80f49ebc0",
+    "currentFileId": "82ca4ac0-0d6e-4b38-9748-2f2a7c00ee62",
     "resources": {
       "http-trigger": {
         "name": "http-trigger",
         "type": "http-trigger",
         "config": {}
       },
-      "datastore": {
-        "name": "datastore",
-        "type": "CloudDatastore",
+      "translateResource": {
+        "name": "translateResource",
+        "type": "Translate",
         "config": {}
       }
     },
@@ -81,13 +71,46 @@
       "dialect": null,
       "definitions": null
     },
-    "envVariables": [],
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_REGION",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_ACCESS_KEY_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_SECRET_ACCESS_KEY",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
     "packageJSON": {
       "dependencies": {
-        "googleapis": {
-          "name": "googleapis",
+        "aws-sdk": {
+          "name": "aws-sdk",
           "language": "nodejs",
-          "version": "29.0.0",
+          "version": "2.644.0",
           "dev": false,
           "notRemovable": false
         }
@@ -98,11 +121,13 @@
     "projectName": "kl",
     "projectDescription": "",
     "projectVersion": "1.0.0",
-    "projectRegion": "asia-east2",
+    "projectRegion": "us-east1",
     "platform": "GCP",
     "language": "nodejs",
-    "platformRegions": {},
-    "lastSave": 1586502947904
+    "platformRegions": {
+      "AWS": "us-east-1"
+    },
+    "lastSave": 1589177471941
   },
   "VCS_STATE": {
     "provider": "GitHub",
